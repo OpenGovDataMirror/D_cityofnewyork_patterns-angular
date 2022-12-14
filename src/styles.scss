@@ -1,0 +1,101 @@
+
+/**
+ * Contents
+ *
+ * - Required
+ * - Option 1
+ * - Option 2
+ * - Option 3
+ * - Tailwindcss
+ */
+
+/**
+ * Required
+ *
+ * Update the Asset paths variables to source from the working directory. This
+ * is required for all options and combinations of imports.
+ */
+
+$cdn: '/src/';
+$path-to-fonts: 'fonts';
+$path-to-svg: 'svg';
+
+/**
+ * Option 1
+ *
+ * Import everything
+ */
+
+// @import '~@nycopportunity/patterns/src/scss/imports';
+
+/**
+ * Option 2
+ *
+ * Import the major pattern blocks
+ */
+
+@import '~@nycopportunity/patterns/src/elements/fonts/fonts';
+@import '~@nycopportunity/patterns/src/scss/objects';
+@import '~@nycopportunity/patterns/src/scss/elements';
+@import '~@nycopportunity/patterns/src/scss/utilities';
+
+/**
+ * Tailwindcss. Fully compiled set of NYCO Utilities. Be sure to run the production
+ * stylesheets through PurgeCSS to minimize its file size. For more info see
+ * https://nycopatterns.cityofnewyork.us/tailwindcss#heading-installation
+ */
+@import '~@nycopportunity/patterns/dist/utilities/tailwindcss/tailwindcss';
+
+/**
+ * Option 3
+ *
+ * Cherry-pick individual patterns that you need.
+ */
+
+// if @font-face is used it needs to be first imported first.
+// @import '~@nycopportunity/patterns/src/elements/fonts/fonts';
+
+/** Objects */
+
+// @import '~@nycopportunity/patterns/src/objects/header/_header.scss';
+// @import '~@nycopportunity/patterns/src/objects/footer/_footer.scss';
+// @import ... etc ...
+// inspect ~@nycopportunity/patterns/src/scss/objects to see available objects.
+
+/** Elements */
+
+// @import '~@nycopportunity/patterns/src/elements/base/_base.scss';
+// @import '~@nycopportunity/patterns/src/elements/links/_links.scss';
+// @import etc ...
+// inspect ~@nycopportunity/patterns/src/scss/elements to see available elements.
+
+/** Utilities */
+
+// @import '~@nycopportunity/patterns-framework/src/utilities/spinner/_spinner.scss';
+// @import '~@nycopportunity/patterns/src/utilities/type/type';
+// @import '~@nycopportunity/patterns/src/utilities/colors/colors';
+// @import ... etc ...
+// inspect ~@nycopportunity/patterns/src/scss/utilities to see available objects.
+
+/**
+ * Tailwindcss
+ *
+ * The tailwindcss file in the dist directory is the fully compiled set of
+ * NYCO Utilities using the config/tailwind.js file in the patterns source.
+ * Be sure to run the production stylesheets through PurgeCSS to minimize its
+ * file size. For more info see
+ * https://nycopatterns.cityofnewyork.us/tailwindcss#heading-installation
+ */
+
+// @import '~@nycopportunity/patterns/dist/utilities/tailwindcss/tailwindcss';
+
+/**
+ * Tailwindcss
+ *
+ * Only if compiling Tailwindcss from the source. This file will only render
+ * the @tailwind utilities variable as a string. Be sure to run the production
+ * stylesheets through PurgeCSS to minimize its file size. For more info see
+ * https://nycopatterns.cityofnewyork.us/tailwindcss#heading-installation
+ */
+
+// @import '~@nycopportunity/patterns/src/utilities/tailwindcss/tailwindcss';
